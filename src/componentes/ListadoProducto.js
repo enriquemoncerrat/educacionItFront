@@ -1,7 +1,7 @@
 import React,{Fragment} from "react";
 
 function ListaProductos(props)
-{ let { productos, EliminarProducto,BuscarporId_Listar } = props;
+{ let { productos } = props;
  return(
    <Fragment>
            <div className="card mt-5 mr-5"> 
@@ -52,7 +52,6 @@ function ListaProductos(props)
 
  )
 
-
-
-
 }
+export default ListaProductos;
+ 

@@ -27,13 +27,14 @@ class Api{
 
 getCafe(id){
 
-    return axios.get(this.url+'getCafe?id='+id).then(respuesta=>data)
+    return axios.get(this.url+'getCafe?id='+id).then(respuesta=>respuesta)
 }
 
 getAll(){
-   return axios.get(this.url+'/api/getproductos').then(respuesta=> respuesta.data )
+   return axios.get(this.url+'/api/getproductos').then(respuesta=> respuesta )
 
 }
 
 
 }
+export default Api

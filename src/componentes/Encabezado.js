@@ -3,28 +3,31 @@ import React , {Fragment} from "react";
 function Encabezado(props) {
 
 let{
-    menuactivo,
-    ListarProductos,
+  menuActivo,
+    ListarProductos
 //    EliminarProductos,
   //  ModificarProductos,
   //  CrearProductos,
 
-}= props;
+} = props;
 
 
 return(
    <Fragment>
-      <nav className="">
-            <ul className="nav nav-tabs bg-light nav-pills justiy-content-center fixed-top">
-              <li className="nav-item">
-                 <a
-                    className={menuactivo}
-                    href="#"
-                    onClick={() =>{
-                       ListarProductos();
-                    }}
-                    >Listar Productos</a>
+     <nav className="">
+        <ul className="nav nav-tabs bg-light nav-pills justify-content-center fixed-top">
+          <li className="nav-item ">
+            <a
+              className={menuActivo}
+              href="/#"
+              onClick={() => {
+                ListarProductos();
+              }}
+            >
+              Listar producto
+            </a>
               </li>
+             
            </ul>   
 
       </nav>

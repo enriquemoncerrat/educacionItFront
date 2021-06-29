@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import Encabezado from "./componentes/Encabezado";
 import ListadoProductos from "./componentes/ListadoProducto";
 import Api from "./api";
-import { render } from '@testing-library/react';
+
 //hacer un metodo que reciba del back los cafes 
 // listar productos tiene q reciubir los cafes
 const  URL = "http://localhost:8080";
@@ -68,6 +68,7 @@ render() {
   return(
   <Fragment>
       <Encabezado
+      ListarProductos={() => this.ListadoProductos()}
       />
       <ListadoProductos
          productos={this.state.productos}

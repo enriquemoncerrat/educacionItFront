@@ -1,54 +1,76 @@
-import React , {Fragment} from "react";
-
+import React, { Fragment } from "react";
 function Encabezado(props) {
+  let {
+    menuActivo,
+    ListarProductos,
+    FormularioProducto,
+    BuscarPorId,
+    BuscarPorDesc,
+    SobreNosotros
+  } = props;
 
-let{
-  menuActivo,
-    ListarProductos
-//    EliminarProductos,
-  //  ModificarProductos,
-  //  CrearProductos,
-
-} = props;
-
-
-return(
-   <Fragment>
-     <nav className="">
+  return (
+    <Fragment>
+      <nav className="">
         <ul className="nav nav-tabs bg-light nav-pills justify-content-center fixed-top">
           <li className="nav-item ">
             <a
-              className={menuActivo}
-              href="/#"
+              className={menuActivo[0]}
+              href="#"
               onClick={() => {
                 ListarProductos();
               }}
             >
               Listar producto
             </a>
-              </li>
-             
-           </ul>   
-
+          </li>
+          <li className="nav-item">
+            <a
+              className={menuActivo[1]}
+              href="#"
+              onClick={() => {
+                FormularioProducto();
+              }}
+            >
+              Crear producto
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
+              className={menuActivo[2]}
+              href="#"
+              onClick={() => {
+                BuscarPorId();
+              }}
+            >
+              Buscar por Id
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
+              className={menuActivo[3]}
+              href="#"
+              onClick={() => {
+                BuscarPorDesc();
+              }}
+            >
+              Buscar por Descripcion
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
+              className={menuActivo[4]}
+              href="#"
+              onClick={() => { SobreNosotros();
+                
+              }}
+            >
+              Sobre nosotros
+            </a>
+          </li>
+        </ul>
       </nav>
-
-      {/*  <h1>Bienvenido al catalogo de Cafe</h1>
-            <nav>
-              <a href="Add">Agregar Cafe | </a>
-              <a href="update">Modificar Cafer | </a>
-              <a href="delete">Borrar Cafe | </a>
-              <a href="Check">Consultar Cafe </a>
-            </nav> */}
-
-
-
-
-
-   </Fragment>
-
-
-
-);
-
+    </Fragment>
+  );
 }
 export default Encabezado;
